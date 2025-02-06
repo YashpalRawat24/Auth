@@ -5,7 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
 </head>
-<body>
-    
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+            .container{
+                background-color: rgb(249, 248, 248);
+                border-radius: 10px;
+                padding: 15px;
+                width: 25vw;
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                /* align-items: center; */
+                justify-content: center;
+            }
+        
+            .container .in{
+                border-radius: 6px;
+                border: 0px;
+                background-color: rgb(232, 240, 254);
+                padding: 6px;
+                font-size: 1em;
+            }
+        
+            .container .letter{
+                margin-top: 0px;
+                font-size: 0.8em;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, ;
+                
+            }
+            .container #pass {
+                margin-left : 240px;
+                text-decoration: dashed;
+            }
+        
+            .container #submit{
+                width: 8vw;
+                font-size: 1em;
+                /* font-weight: bold; */
+                color: rgb(255, 255, 255);
+                background-color: rgb(78, 54, 245);
+                border-color: rgb(255, 255, 255);
+                border-radius: 6px;
+                padding: 4px;
+                margin-left: 120px
+            }
+            .container #last{
+                margin-left: 110px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, ;
+            }
+            .container h4{
+                margin-left: 165px;
+            }
+         .image{
+          width: 30%;
+          /* height: 0%; */
+           
+        }
+        
+        </style>
+        
+
+        <body>
+      
+            <div class="image">
+                <img src="https://material-kit-pro-react.devias.io/assets/logo--dark.svg">
+            </div>
+            <div class="container">
+        
+            <h1>Login</h1>
+        
+            <input class="in" type="text" name="username" value="" placeholder="username" >
+            <p class="letter">username is required</p>
+        
+            <input class="in" type="password" name="password" value="" placeholder="password">
+            <p class="letter">password is required</p>
+        
+            <a id="pass" href="">forgot password?</a><br><br>
+        
+            <input id="submit" type="submit" name="submit">
+        
+            <h4>Or</h4>
+            <P id="last">do not have Account?<a href="" style="text-decoration: dashed;">Register</a></P>
+        
+        </div>
 </body>
 </html>
