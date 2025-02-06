@@ -1,33 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 30vw;
+        height: 90vh;
+        border: 1px solid rgb(216, 213, 213);
+        border-radius: 15px;
+         background-color: rgb(255, 255, 255); 
+         box-shadow:  rgba(0, 0, 0, 0.04) 0px 5px 22px 0px,;
+         color-scheme: light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        padding-left: 10px;
+
+    }
+.container .image img{
+    width: 10vw;
+}
+    .in {
+        width: 29vw;
+        border-radius: 6px;
+        border: 0px;
+        background-color: rgb(232, 240, 254);
+        padding: 6px;
+        font-size: 1em;
+        margin-top: 4px;
+    }
+
+    #submit {
+        width: 29vw;
+        padding: 6px;
+        font-size: 1em;
+        background-color: rgb(78, 54, 245);
+        color: rgb(255, 255, 255);
+        /* background-image: linear-gradient(rgb(99, 91, 255) 0%, rgb; */
+        border-bottom-color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
+      
+        border-radius: 8px;
+    }
+
+    .container p {
+        font-size: 1em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, ;
+        /* background-color: black; */
+    }
+</style>
 
 
-Register
-    <form action="" method="get">
-    
+<body>
+    <div class="container">
 
-        <input type="text" value="name">
+        <div class="image">
+            <img src="https://material-kit-pro-react.devias.io/assets/logo--dark.svg">
+        </div>
+        <h2> Register</h2>
+        <form action="" method="get">
 
-        <input type="text" placeholder="Username">
-        <input type="number" value="phone" placeholder="phone">
-        <input type="email" value="email">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Confirm Password">
-        <input type="text" name="name" value="" placeholder="Name" autofocus>
-        <input type="text" name="username" value="" placeholder="Username">
-        <input type="number" name="phone" value="" placeholder="phone">
-        <input type="email" name="email" value="" placeholder="email">
-        <input type="password" name="password" value="" placeholder="Password">
-        <input type="password" name="confirm-password" value="" placeholder="Confirm Password">
-        <input type="submit"  value="Submit">
+            <label for="name">name</label><br>
+            <input class="in" id="name" type="text" value=""><br><br>
 
-        <p>Already have an account?<a href="/flexbox/task3.html" style="color: black; ">Login</a></p>
+            <label for="username">Username</label><br>
+            <input class="in" type="text" id="username" name="username" value=""><br><br>
+
+            <label for="phone">Phone</label><br>
+            <input class="in" type="number" id="phone" name="phone" value=""><br><br>
+
+            <label for="email">Email adress</label><br>
+            <input class="in" type="email" id="email" value=""><br><br>
+
+            <label for="password">Password</label><br>
+            <input class="in" type="password" id="password" value=""><br><br>
+
+            <label confirm> Confirm password</label><br>
+            <input class="in" type="password" id="confirm" name="cnf password" value=""><br><br>
+
+
+            <input type="checkbox" id="check" name="" value="">
+            <label for="check">Accept T&c</label><br><br>
+
+
+            <input id="submit" type="submit" value="Submit">
+
+            <p>Already have an account?<a href="/flexbox/task3.html" style="text-decoration: dashed;">Login</a></p>
 
         </form>
+    </div>
+
 </body>
+
 </html>
