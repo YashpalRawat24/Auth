@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    body{
+        font-family: "Inter", serif;
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px rgb(151, 150, 150);
+        width: 30vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    form{
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 40px; */
+        /* margin: 30px; */
+    }
+
+    .tagg{
+        padding: 10px;
+    }
+
+    input{
+     border: 1px solid white;
+     box-shadow: 0px 0px 2px rgb(151, 150, 150);
+     border-radius: 6px;
+     width: 300px;
+     font-size: 15px;
+     font-weight: 400;
+     padding: 5px;
+    }
+input:focus{
+
+    border: 1px solid rgb(50, 50, 159);
+  /* background-color: brown; */
+  outline: 1px rgb(46, 15, 169);
+  box-shadow: 0px px 3px blue ;
+}
+
+:focus-within label{
+    color: blue;
+}
+    span{
+        color: red;
+        font-size: 14px;
+    }
+
+    #submit{
+        /* border: 1px solid black; */
+        background-color: rgb(78, 54, 245);
+        border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px 0px, rgb(78, 54, 245) 0px 0px 0px 1px inset, rgba;
+    border-radius: 8px;
+    color:  rgb(255, 255, 255); 
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h3 style="font-size: 20px;">Add user</h3>
+        <form>
+            <div class="tagg">
+                <label for="name">Name</label><br>
+                <input type="text" name="name" value="" id="name" placeholder="Enter your name"><br>
+                <span>Name is required</span><br><br>
+
+            </div>
+
+            <div class="tagg">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" value="" id="email" placeholder="Enter your email"><br>
+                <span>email is required</span><br><br>
+
+            </div>
+
+            <div class="tagg">
+                <label for="phone">Phone</label><br>
+                <input type="number" name="phone" value="" id="phone" placeholder="Enter your phone no."><br>
+                <span>Phone no. is required</span><br><br>
+
+            </div>
+
+            <div class="tagg">
+                <label for="password">Password</label><br>
+                <input type="password" name="password" value="" id="password" placeholder="Enter your password"><br>
+                <span>password is required</span><br><br>
+
+            </div>
+
+            <div class="tagg">
+                <label for="cnfpassword">Confirm password</label><br>
+                <input type="password" name="cnfpassword" value="" id="cnfpassword"
+                    placeholder="Enter your password"><br>
+                <span>password does not match</span><br><br>
+
+            </div>
+
+            <div class="tagg">
+                <input id="submit" type="submit" name="submit">
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
