@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Online Javascript Editor for free
+        // Write, Edit and Run your Javascript code using JS Online Compiler
+
+        function createSchool() {
+
+            const school = {
+                name: "DPS",
+                established: 1999,
+                classes: {}
+
+            };
+
+            const subjectsByClass = {
+                "1-2": ["English", "Hindi", "Maths"],
+                "3-8": ["English", "Hindi", "Maths", "Science", "GK", "social-science"],
+                "9-10": ["English", "Hindi", "Maths", "Science", "History", "GK", "social-science"],
+                "Science-Math": ["English", "Hindi", "Maths", "Physics", "Chemistery"],
+                "Science-Bio": ["English", "Hindi", "Bio", "Physics", "Chemistery"],
+                "Commerce": ["Maths", "Finance", "Accounts", "English", "Hindi"],
+                "Arts": ["Hindi", "Political Science", "Literature", "English"]
+
+            };
+            function getSubjects(Class, Stream = null) {
+                if (Class >= 1 && Class <= 2) return subjectsByClass["1-2"];
+                if (Class >= 3 && Class <= 8) return subjectsByClass["3-8"];
+                if (Class >= 9 && Class <= 10) return subjectsByClass["9-10"];
+                if (Class >= 11 && Class <= 12) return subjectsByClass[Stream];
+                return [];
+            }
+
+
+            for (let Class = 1; Class <= 12; Class++) {
+                school.classes[Class] = {
+                    sections: {},
+                    subjects: Class <= 10 ? getSubjects(Class) : ["Science-Math", "Science-Bio", "Commerce", "Arts"]
+                };
+
+                let sectionCount = Math.floor(Math.random() * 7) + 4;
+
+
+                for (let sec = 1; sec <= sectionCount; sec++) {
+                    let sectionName = `section${sec}`;
+                    school.classes[Class].sections[sectionName] = {
+                        students: []
+                    };
+
+                    let studentCount = Math.floor(Math.random() * 6) + 11;
+
+                    for (let s = 1; s <= studentCount; s++) {
+                        let student = {
+                            name: `student ${s}`,
+                            fathername: `father ${s}`,
+                            mothername: `mother ${s}`,
+                            DOB: `200${s}-01-01`,
+                            marks: {}
+
+                        };
+
+                        let subjects;
+                        if (Class <= 10) {
+                            subjects = getSubjects(Class);
+                        }
+                        else {
+                            let Stream = school.classes[Class].subjects[Math.floor(Math.random() * 4)];
+                            subjects = getSubjects(Class, Stream);
+                        }
+
+                        subjects.forEach(subject => {
+                            student.marks[subject] = Math.floor(Math.random() * 51) + 50;
+                        });
+
+                        school.classes[Class].sections[sectionName].students.push(student);
+
+
+                    }
+
+
+                }
+            }
+
+            return school;
+
+
+
+        }
+
+        const DPS = createSchool();
+        console.log(DPS);
+
+
+
+    </script>
+</body>
+
+</html>

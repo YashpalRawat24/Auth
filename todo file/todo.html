@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #todo-list, #removed-list {
+            margin-bottom: 20px;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .todo-item button {
+            margin-left: 10px;
+        }
+
+        .removed-item {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To-Do List</h1>
+
+    <div>
+        <input type="text" id="task-input" placeholder="Enter a task">
+        <button id="add-task">Add Task</button>
+    </div>
+
+    <h2>Active Tasks</h2>
+    <div id="todo-list"></div>
+
+    <h2>Removed Tasks</h2>
+    <div id="removed-list"></div>
+
+    <script>
+        
+        const taskInput = document.getElementById("task-input");
+        const addTaskButton = document.getElementById("add-task");
+        const todoList = document.getElementById("todo-list");
+        const removedList = document.getElementById("removed-list");
+
+        
+        addTaskButton.addEventListener("click", function() {
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                
+                const todoItem = document.createElement("div");
+                todoItem.classList.add("todo-item");
+
+                
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+
+              
+                const taskTextElement = document.createElement("span");
+                taskTextElement.textContent = taskText;
+
+              
+                const crossButton = document.createElement("button");
+                crossButton.textContent = "❌";
+
+                
+                todoItem.appendChild(checkbox);
+                todoItem.appendChild(taskTextElement);
+                todoItem.appendChild(crossButton);
+
+
+                todoList.appendChild(todoItem);
+
+           
+                taskInput.value = "";
+
+              
+                crossButton.addEventListener("click", function() {
+                  
+                    todoList.removeChild(todoItem);
+                    removedList.appendChild(todoItem);
+                    taskTextElement.classList.add("removed-item");
+                    checkbox.disabled = true; 
+                });
+
+           
+                checkbox.addEventListener("click", function() {
+                    if (checkbox.checked) {
+                       
+                        removedList.removeChild(todoItem);
+                        todoList.appendChild(todoItem);
+                        taskTextElement.classList.remove("removed-item");
+                        checkbox.disabled = false;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

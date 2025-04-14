@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  width: 100%;  /* Adjust as necessary */
+  height: auto;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.image-container:hover .text-overlay {
+    top: -40px;
+  opacity: 1;
+}
+
+</style>
+<body>
+
+    <div class="image-container">
+        <img src="information-line.png" alt="Image" class="image">
+        <div class="text-overlay">This is the text that pops up on hover!</div>
+      </div>
+    
+</body>
+</html>

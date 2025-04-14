@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kuch bhi</title>
+</head>
+<style>
+    /* #container{
+        border: 2px solid black;
+        height: 500px;
+        width: 500px;
+        background-color: rgb(203, 247, 247);
+    }
+
+    .box{
+
+        border: 2px solid black;
+        height: 50px;
+        width: 50px;
+        background-color: rgb(186, 130, 237);
+    } */
+</style>
+
+<body>
+    <!-- <div id="container">
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ </div> -->
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        // function add(a,b){
+        //     return arguments[0] + arguments[1];
+        // };
+
+        // function add(...a){
+        //     return a[0] + a[2] + a[4];
+        // }
+
+        // function add(a,b){
+        //     return a+b;
+        // }
+
+        // function add(a, b) {
+        //     a = a ?? 0;
+        //     b = b ?? 0;
+        //     return a + b;
+        // }
+
+        // console.log(add(1,2,3,4,5,6));
+
+
+        // console.log(  add());
+        // console.log(  add(1));
+        // console.log(  add(1,2));
+        // console.log(  add(1,2,3));
+
+
+
+
+
+        // a = 10;
+        // b = 0;
+        // c = null;
+
+        // if (c ?? b ?? a) {
+        //     alert('hii');
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //         function printPersonInfo(name, birthYear, likesToPlayCricket, likesToRead, isEligibleToVote) {
+
+        //   const currentYear = new Date().getFullYear();
+        //   const age = currentYear - birthYear;
+
+
+        //   let message = `${name} is born in ${birthYear} and `;
+
+
+        //   if (isEligibleToVote) {
+        //     message += 'he is eligible to vote. ';
+        //   } else {
+        //     message += 'she is not eligible to vote. ';
+        //   }
+
+
+        //   let hobbies = [];
+        //   if (likesToPlayCricket) hobbies.push("play cricket");
+        //   if (likesToRead) hobbies.push("read");
+
+
+        //   if (hobbies.length > 0) {
+        //     message += `They like to ${hobbies.join(" and ")}.`;
+        //   }
+
+        //   console.log(message);
+        // }
+
+
+
+        // printPersonInfo("Jayant", 1988, true, false, true);
+
+
+        // printPersonInfo("Uma", 2010, false, true, false);
+
+
+        // printPersonInfo("John", 2000, true, true, true);
+
+
+
+
+
+
+
+
+
+        // var yash = 20;
+
+        // var akash = 10;
+
+        // var name = "yash";
+        // // var name2 = akash;
+
+        // console.log(name);
+        // // console.log(name2);
+
+        // document.createElement()
+
+
+
+
+
+        // const container = document.createElement('div');
+
+        // container.style.border = "2px solid black";
+        // container.style.width = "200px";
+        // container.style.width = "200px";
+
+        // const para = document.createElement('p');
+        // para.innerHTML = 'hello <span style="font-weight.bold">world</span>'
+
+
+
+        // function worldClicked() {
+        //     alert("clicked world")
+        // }
+
+        // para.onclick = worldClicked
+        // container.appendChild(para);
+        // document.body.appendChild(container);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const container=document.createElement("div")
+container.style.border = "2px solid black";
+container.style.width = "300px";
+container.style.padding = "20px";
+container.style.margin = "200px auto";
+container.style.textAlign = "center";
+container.style.borderRadius = "10px";
+container.style.fontFamily = "Arial, sans-serif";
+container.style.backgroundColor = "#f9f9f9";
+const para=document.createElement("p")
+para.innerHTML='hello <span style="font-weight:bold" class="bold"> world </span>';
+para.style.textTransform = "uppercase";
+para.onclick=worldClick
+container.appendChild(para)
+
+
+let bool=true;
+let counter=0
+const count=document.createElement("p")   
+function worldClick(){
+    
+    if(bool===true){
+        document.querySelector(".bold").style.fontWeight ="normal"
+        bool=false
+        counter++
+    }
+    
+    else{
+        document.querySelector(".bold").style.fontWeight ="bold"
+        bool=true
+        counter++
+    }
+
+    count.innerHTML=counter
+    if(count.innerHTML>=10){
+        document.querySelector(".bold").remove()
+    }
+}
+container.appendChild(count)
+document.body.appendChild(container)
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

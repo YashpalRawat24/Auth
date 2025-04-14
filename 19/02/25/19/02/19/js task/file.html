@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+      border: 2px solid black;
+      height: 10vh;
+      width: 10vw;
+    }
+  .draw{
+    border: 2px solid black;
+    height: 50px;
+  }
+    .box:nth-child(3) .draw{
+      background-color: red;
+    }
+  
+  </style>
+  
+  <body>
+      <div class="boxes">
+  
+        <div class="box">
+          <span>0</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box">
+          <span>1</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box" onclick="alert('oyeee kisne touch kiya usko makhanchor')">
+          <span>2</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box" onclick="prompt('pasndida word')">
+          <span>3</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box">
+          <span>4</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box">
+          <span>5</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box">
+          <span>6</span> 
+          <div class="draw"></div> 
+        </div>
+  
+        <div class="box">
+          <span>7</span>
+          <div class="draw"></div>
+        </div>
+  
+        <div class="box">
+          <span>8</span>
+          <div class="draw"></div>
+        </div>
+  
+        
+      </div>
+  </body>
+    <script>
+      //   n = 5;
+      // for(i = 1;i<=n;i++){
+  
+      //     row = "";
+  
+      //     for(j=1;j<=i;j++){
+  
+      //         row = row + " *";
+      //     }
+      //     console.log(row);
+      // }
+  
+  
+      // document.getElementsByClassName("box")[0]
+  
+  
+      
+    //   let age = prompt('how old are you, 100');
+    //   alert(`you are ${age} years old`);
+  
+
+
+    let name = prompt('what is your name');
+    alert(name);
+
+
+    // let isBoss = confirm('are you the boss');
+    // alert(isBoss);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="main">
+        <input id="a" type="text">
+        <input id="b" type="text">
+        <button id="btnAdd">add</button>
+        <button id="showR">show result</button>
+    </div>
+    
+
+
+    <script>
+
+    // debugger   
+        // let result = 0;
+        const inputA = document.querySelector("#a");
+        const inputB = document.querySelector("#b");
+        const btnAdd = document.querySelector("#btnAdd");
+        const showR = document.querySelector("#showR");
+
+
+        function Addition() {
+        
+            const valA = + inputA.value;
+            const valB = inputB.value;
+
+            result = valA + valB;
+            showR.disabled = false;
+        }
+
+        function showResult() {
+            alert(result);
+            showR.disabled = true;
+            result = "";
+        }
+
+
+
+        showR.disabled = true;
+        btnAdd.addEventListener("click", Addition);
+        showR.addEventListener("click",showResult);
+
+
+
+
+    </script>
+    
+</body>
+</html>

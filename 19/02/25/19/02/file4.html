@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@faker-js/faker@9.6.0/dist/chunk-O3FRUTFM.min.js"></script>
+</head>
+
+<body>
+    <!-- <div id="result"></div> -->
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script>
+        // const divR = document.getElementById("result");
+        // for (i = 0; i < 4; ++i) {
+        //     // divR.innerHTML += "*";
+        //     let row = '*';
+        //     console.log(row);
+        // }
+
+
+// let fruits = [];
+// fruits[1] = "Apple";
+
+// alert( fruits.length );
+
+
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+// // arr.length = 2; // truncate to 2 elements
+// // alert( arr ); // [1, 2]
+
+// arr.length = 5; // return length back
+// alert( arr[3] );
+
+
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+
+// alert( matrix[1][5] );
+
+
+
+
+
+// alert( [] + 1 ); // "1"
+// alert( [1] + 1 ); // "11"
+// alert( [1,2] + 1 ); // "1,21"
+
+
+
+
+
+
+
+
+
+
+
+        // let arr=["c",""];
+        // arr.splice(1,1,['e','f','g']);
+    //  arr.splice(1,1,'e','f','g');
+    //  arr.splice(1,0,'e','f','g');
+
+        // console.log(arr);
+
+
+
+
+
+
+        // let arr = ["c","e","f","g",["a","d","z"]];
+
+        // let FlatArr = arr.flat();
+
+        // console.log(FlatArr);
+
+
+
+
+
+        // FlatArr.sort();
+        // console.log(FlatArr);
+
+        // let lowest = FlatArr[0];
+        // let secondLowest = FlatArr[1];
+        // let highest = FlatArr.at(-1);
+        // let thirdHighest = FlatArr.at(-3);
+
+        // console.log(`lowest : ${lowest}`);
+        // console.log(`secondLowest : ${secondLowest}`);
+        // console.log(`highest : ${highest}`);
+        // console.log(`thirdHighest : ${thirdHighest}`);
+
+
+                            
+
+
+//  slice array
+
+        // let arr = [1,2,3,4,5];
+
+        // console.log(arr.slice(2,-3));
+        // console.log(arr.slice(2,-1));
+        // console.log(arr.slice(-2,3));
+        // console.log(arr.slice(-2,0));
+
+        // console.log(arr.slice);
+
+
+
+
+
+
+        // concat array
+
+
+    //     let arr = [3,2,1,4,5];
+                 
+    //    let  arr2 = [7,8,9,10];
+
+    //  console.log(arr2.concat(arr)) ;
+    //  console.log(arr.concat(arr2)) ;
+    //  console.log(arr);
+    //  console.log(arr2);  
+
+
+
+
+
+    // arr.sort((Ni,Ci) =>{
+    //     console.log({Ci,Ni})
+    //     return Ni - Ci
+    // })
+
+    // console.log(arr);
+
+
+
+
+
+
+
+// question
+
+//     let arr = ["a","b","a","c","b","d","e","e","c","z","z"];
+
+// let value = arr.find((item)=>{
+//     return arr.indexOf(item) === arr.lastIndexOf(item)
+//     // return item;
+// })
+
+// console.log(value);
+
+
+
+
+
+
+// Q
+
+
+
+// let arr = [[80,95,72,65,43],[67,78,87,65,61,33,74],[37,49,84,85,68,93],[91,85,73,48,59,63],[78,95,65,98,42,73],[47,54,79,98,52,69]];
+// let totalsum = 0;
+// for(i=0;i<arr.length;i++){
+//     sum=0;
+//     for(j=0;j<arr[i].length;j++){
+//       sum+= arr[i][j];
+
+//     }
+//      totalsum+= sum;
+//    let avg = sum/arr[i].length;
+//    console.log(`average ${avg}`)
+//    console.log(`sum ${sum}`)
+   
+// }
+// console.log(`total average ${totalsum/arr.length}`)
+// console.log(`totalsum: ${totalsum}`)
+
+
+
+
+
+// Q2
+
+
+// arr = [[1,2,3],[4,5]];
+
+// let totalSum = 0;
+// for(i=0;i<arr.length;i++){
+//     let sum = 0;
+    
+//     for(j=0;j<arr[i].length;j++){
+//         sum += arr[i][j];
+//     }
+//     totalSum += sum
+//     console.log(`sum: ${sum}`)
+// }
+// console.log(`totalSum: ${totalSum}`)
+
+
+
+//  Q multiply
+
+// arr = [1,2,3];
+
+// let p = 2;
+// for(i=0;i<arr.length;i++){
+//     let power = 1;
+//     for(j=0;j<p;j++){
+//         power *= arr[i] 
+//     }
+//     console.log(power)
+// }
+
+
+
+
+
+
+
+
+// Q   object question 
+
+
+
+
+// let second_class = {
+//      section_A : {
+//         abhay : 80,
+//         akash : 95,
+//         bhaskar : 72,
+//         bhavesh : 65,
+//         bhotik : 43
+        
+//     },
+//     section_B : {
+//         chandani :67 ,
+//         darshan : 78,
+//         dhaval : 87,
+//         pankaj : 65,
+//         kusharg : 61,
+//         shubham : 33,
+//         peter : 74
+//     },
+    
+//     section_C : {
+//         misthi :77 ,
+//         dhanu : 87,
+//         virat : 75,
+//         pinku : 56,
+//         vikram : 19,
+//         vinayak : 37,
+//         paan : 47
+//     },
+//     section_D : {
+//         chanakya :72 ,
+//         chirag : 81,
+//         chinu : 57,
+//         panvel : 56,
+//         ranu : 41,
+//         shushil : 93,
+//         palak : 94
+//     },
+
+//     section_E : {
+//         Aman :77 ,
+//         abdul : 98,
+//         ameer : 37,
+//         waseem : 45,
+//         vishakha : 91,
+//         shabnam : 43,
+//         naseer : 84
+//     },
+    
+//     section_F : {
+//         shera :62 ,
+//         vansh : 85,
+//         dharmesh : 59,
+//         shivam : 49,
+//         khushi : 69,
+//         seenu : 93,
+//         raju : 94
+//     },
+    
+// }
+    
+//     let arr1 =[];
+//     // Object.keys(second_class).forEach(key => {
+        
+    
+//     //     console.log(second_class[key]);
+    
+//         Object.keys(second_class.section_A).forEach(key => {
+        
+    
+//         console.log(second_class.section_A[key]);
+//         arr1.push(second_class.section_A[key]);
+
+
+// });
+// console.log(arr1);
+
+
+
+//     let arr2 =[];
+
+//         Object.keys(second_class.section_B).forEach(key => {
+        
+    
+//         console.log(second_class.section_B[key]);
+//         arr2.push(second_class.section_B[key]);
+
+
+// });
+// console.log(arr2);
+
+
+
+//     let arr3 =[];
+
+//         Object.keys(second_class.section_C).forEach(key => {
+        
+    
+//         console.log(second_class.section_C[key]);
+//         arr3.push(second_class.section_C[key]);
+
+
+// });
+// console.log(arr3);
+
+
+//     let arr4 =[];
+
+//         Object.keys(second_class.section_D).forEach(key => {
+        
+    
+//         console.log(second_class.section_D[key]);
+//         arr4.push(second_class.section_D[key]);
+
+
+// });
+// console.log(arr4);
+
+
+//     let arr5 =[];
+
+//         Object.keys(second_class.section_E).forEach(key => {
+        
+    
+//         console.log(second_class.section_E[key]);
+//         arr5.push(second_class.section_E[key]);
+
+
+// });
+// console.log(arr5);
+
+
+
+//     let arr6 =[];
+
+//         Object.keys(second_class.section_F).forEach(key => {
+        
+    
+//         console.log(second_class.section_F[key]);
+//         arr6.push(second_class.section_F[key]);
+
+
+// });
+// console.log(arr6);
+
+
+
+
+// let TotalArr = [arr1,arr2,arr3,arr4,arr5,arr6];
+
+// // console.log(TotalArr);
+
+// let TotalSum = 0;
+// for(i=0;i<TotalArr.length;i++){
+//     let sum =0;
+//     for(j=0;j<TotalArr[i].length;j++){
+//         sum += TotalArr[i][j];
+//     }
+//     TotalSum += sum;
+//     // console.log(`sum: ${sum}`);
+//     console.log(`section Avg: ${sum/TotalArr[i].length}`);
+// }
+// console.log(`class Avg ${TotalSum/TotalArr.length}`);
+
+
+// let maxNumberA = Math.max(...arr1);
+
+// console.log(`sectionA max marks: ${maxNumberA}`);
+
+
+// let maxA = arr1[0];
+// for(i=1;i<arr1.length;i++){
+//   if( arr1[i] > maxA  ){
+//     maxA = arr1[i];
+//   }
+// }
+// console.log(`max. marks in section A: ${maxA}`);
+
+// let maxB = arr2[0];
+// for(i=1;i<arr2.length;i++){
+//   if( arr2[i] > maxB  ){
+//     maxB = arr2[i];
+//   }
+// }
+// console.log(`max. marks in section B:${maxB}`);
+
+// let maxC = arr3[0];
+// for(i=1;i<arr3.length;i++){
+//   if( arr3[i] > maxC  ){
+//     maxC = arr3[i];
+//   }
+// }
+// console.log(`max. marks in section C:${maxC}`);
+
+// let maxD = arr4[0];
+// for(i=1;i<arr4.length;i++){
+//   if( arr4[i] > maxD  ){
+//     maxD = arr4[i];
+//   }
+// }
+// console.log(`max. marks in section D:${maxD}`);
+
+// let maxE = arr5[0];
+// for(i=1;i<arr5.length;i++){
+//   if( arr1[i] > maxE  ){
+//     maxE = arr5[i];
+//   }
+// }
+// console.log(`max. marks in section E:${maxE}`);
+
+// let maxF = arr6[0];
+// for(i=1;i<arr6.length;i++){
+//   if( arr6[i] > maxF  ){
+//     maxF = arr6[i];
+//   }
+// }
+// console.log(`max. marks in section F:${maxF}`);
+
+// let maxNumberB = Math.max(...arr2);
+
+// console.log(`sectionB max marks: ${maxNumberB}`);
+
+
+
+// let maxNumberC = Math.max(...arr3);
+
+// console.log(`sectionC max marks: ${maxNumberC}`);
+
+
+
+// let maxNumberD = Math.max(...arr4);
+
+// console.log(`sectionD max marks: ${maxNumberD}`);
+
+
+
+// let maxNumberE = Math.max(...arr5);
+
+// console.log(`sectionE max marks: ${maxNumberE}`);
+
+
+
+// let maxNumberF = Math.max(...arr6);
+
+// console.log(`sectionF max marks: ${maxNumberF}`);
+
+
+
+
+// let TopperName = Object.keys(second_class.section_A).find(key => {
+        
+    
+//         second_class.section_A[key] === maxA;
+
+// });
+//  console.log(`max. marks student in section A:${TopperName}`);  
+ 
+ 
+ 
+
+ 
+ 
+//  let maximum = TotalArr[0];
+//  for(i=1;i<TotalArr.length;i++){
+//      if(TotalArr[i] > maximum){
+//          maximum = TotalArr[i];
+//      }
+//  }
+//  console.log(`max. marks in class:${maximum}`);
+
+
+// let TotalMarks = [maxA,maxB,maxC,maxD,maxE,maxF];
+// let maxM = TotalMarks[0];
+// for(i=0;i<TotalMarks.length;i++){
+//     if(TotalMarks[i] > maxM){
+//         maxM = TotalMarks[i];
+//     }
+// }
+// console.log(`max. marks in class E:${maxM}`);
+
+
+
+// let Toppername = Object.keys(second_class).find(key => {
+        
+    
+//         second_class[key] === maxM;
+
+// });
+//  console.log(`max. marks student in class:${Toppername}`);  
+
+
+
+
+
+
+
+//  other method to do this question
+
+// let second = {
+//      section_A : {
+//         abhay : 80,
+//         akash : 95,
+//         bhaskar : 72,
+//         bhavesh : 65,
+//         bhotik : 43
+        
+//     },
+//     section_B : {
+//         chandani :67 ,
+//         darshan : 78,
+//         dhaval : 87,
+//         pankaj : 65,
+//         kusharg : 61,
+//         shubham : 33,
+//         peter : 74
+//     },
+    
+//     section_C : {
+//         misthi :37 ,
+//         dhanu : 49,
+//         virat : 84,
+//         pinku : 85,
+//         vikram : 68,
+//         vinayak : 93
+//     },
+//     section_D : {
+//         chanakya :91 ,
+//         chirag : 85,
+//         chinu : 73,
+//         panvel : 48,
+//         ranu : 59,
+//         shushil : 63
+//     },
+
+//     section_E : {
+//         Aman :75 ,
+//         abdul : 98,
+//         ameer : 37,
+//         waseem : 45,
+//         vishakha : 91,
+//         shabnam : 43,
+//         naseer : 84
+//     },
+    
+//     section_F : {
+//         shera :47 ,
+//         vansh : 85,
+//         dharmesh : 59,
+//         shivam : 49,
+//         khushi : 69,
+//         seenu : 93,
+//         raju : 94
+//     },
+    
+// }
+
+// let Total = 0;
+// let count = 0;
+// let Topper = "";
+// let top_marks = 0;
+
+// Object.keys(second).forEach((item) =>
+// {
+//     let section_total = 0;
+//     let section_count = 0;
+//     Object.keys(second[item]).forEach((student) =>{
+//         let marks = second[item][student]
+        
+//         if(top_marks <= marks){
+//             top_marks = marks;
+//             Topper = student;
+//         }
+//         section_total += marks;
+//         section_count++;
+//         Total += marks;
+//         count++;
+//     });
+//     console.log(section_total,section_count);
+// });
+
+// console.log(`avg marks of second class: ${Total/count}`);
+// console.log(`topper name:${Topper} with marks${top_marks}`);
+
+
+
+
+
+
+
+
+
+
+//  lowest marks 
+
+
+// let second = {
+//      section_A : {
+//         abhay : 80,
+//         akash : 95,
+//         bhaskar : 72,
+//         bhavesh : 65,
+//         bhotik : 43
+        
+//     },
+//     section_B : {
+//         chandani :67 ,
+//         darshan : 78,
+//         dhaval : 87,
+//         pankaj : 65,
+//         kusharg : 61,
+//         shubham : 33,
+//         peter : 74
+//     },
+    
+//     section_C : {
+//         misthi :37 ,
+//         dhanu : 49,
+//         virat : 84,
+//         pinku : 85,
+//         vikram : 68,
+//         vinayak : 93
+//     },
+//     section_D : {
+//         chanakya :91 ,
+//         chirag : 85,
+//         chinu : 73,
+//         panvel : 48,
+//         ranu : 59,
+//         shushil : 63
+//     },
+
+//     section_E : {
+//         Aman :75 ,
+//         abdul : 98,
+//         ameer : 34,
+//         waseem : 45,
+//         vishakha : 91,
+//         shabnam : 43,
+//         naseer : 84
+//     },
+    
+//     section_F : {
+//         shera :47 ,
+//         vansh : 85,
+//         dharmesh : 59,
+//         shivam : 49,
+//         khushi : 69,
+//         seenu : 93,
+//         raju : 14
+//     },
+    
+// }
+
+// let Total = 0;
+// let count = 0;
+// let lowest = "";
+// let low_marks = 100;
+
+// Object.keys(second).forEach((item) =>
+// {
+//     let section_lowest = "";
+//     let section_lowest_Marks = 100;
+//     let section_total = 0;
+//     let section_count = 0;
+//     Object.keys(second[item]).forEach((student) =>{
+//         let marks = second[item][student]
+        
+//         if(low_marks >= marks ){
+//             low_marks = marks;
+//             lowest = student;
+//         }
+//           if(section_lowest_Marks >= marks ){
+//             section_lowest_Marks = marks;
+//             section_lowest = student;
+//         }
+//         section_total += marks;
+//         section_count++;
+//         Total += marks;
+//         count++;
+
+//     });
+
+//     console.log(section_total,section_count);
+//     console.log(`lowest name ${section_lowest},with marks ${section_lowest_Marks}`)
+
+// });
+
+
+// console.log(`avg marks of second class: ${Total/count}`);
+// console.log(`lowest name of class:${lowest} with marks${low_marks}`);
+ 
+
+
+
+
+
+
+
+// import { faker } from 'https://esm.sh/@faker-js/faker';
+ 
+
+
+
+
+
+
+
+
+
+// var class_N = 1
+// let student = { class:class_N, section:'a'};      
+
+// const marks ={
+//     hindi:70,
+//     eng:80,
+//     math:65
+// }
+
+// const profile ={
+//     name:"yash",
+//     fname:"xyz",
+//     mname:"zbc",
+//     dob:"13-11-24"
+// }
+
+// // student.marks = marks;
+// // student.profile = profile;
+// // student = {marks,profile}
+
+// student['marks'] = Object.assign(marks) 
+
+// const student2 = structuredClone(student);
+// const student3 = {...student,marks:{...student.marks}};
+// student.section = 'c';
+// student3.marks.hindi = 100;
+//  marks.hindi = 100;
+
+
+
+// console.log(student,student2,student3,marks)
+// // console.log(student2)
+
+
+
+
+// let yash = {};
+// let ravi = {};
+
+// section = "a";
+// class_Name = 1;
+// kush = yash;
+// jayant = ravi;
+
+// marks = {
+//     hindi:100,
+//     english:100,
+//     maths:100
+// }
+
+// part 1
+
+
+
+// yash = {
+//     class_Name,
+//     section,
+//     marks
+// }
+// class_Name = 2;
+
+// ravi['class_Name'] = class_Name;
+// ravi.section = section;
+// ravi.marks = marks;
+
+// console.log({yash,kush});
+// console.log({ravi,jayant});
+
+
+
+
+// part 2
+
+// yash.marks = Object.assign(marks);
+// yash.class_name = class_name;
+// yash.section = section;
+// console.log({yash,kushagra});
+
+
+
+// part 3
+
+// yash = {...yash,class_name,section,marks}
+// kushagra = yash;
+// marks.hindi = 70;
+// console.log({yash,kushagra,marks});
+
+
+
+// part 4 
+
+
+// yash ={class_name,section,marks:{...marks}}
+// kushagra = yash;
+// marks.hindi = 70;
+// kushagra.marks.Eng = 40;
+// console.log({yash,kushagra,marks})
+
+
+
+
+// part 5
+
+// yash = {class_name,section,marks:{...marks}}
+// kushagra = {...yash};
+// kushagra.marks.hindi = 70;
+// console.log({yash,kushagra,marks})
+
+
+
+// part 6
+
+
+// yash = {class_name,section,marks:{...marks}}
+// kushagra = structuredClone(yash);
+// kushagra.marks.hindi = 70;
+// console.log({yash,kushagra,marks}) 
+
+
+
+
+
+
+
+
+
+
+
+
+let marks = {
+    hindi:56,
+    english:66,
+    maths:34
+    
+}
+
+yash = {
+    name:"yash",
+    marks:{...marks,totalMarks:300},
+    class:1
+    
+    
+}
+
+kush = {
+    name:"kush",
+   
+    marks:{...marks},
+    class:2
+}
+marks.getTotal = function() {
+  return this.hindi + this.english + this.maths
+    }
+const printResult = function(){
+   const name = this.name
+   const total = this.marks.getTotal();
+   const totalMarks = this.marks
+    return  `${name} got total ${total} out of ${totalMarks} marks` 
+}
+
+
+yash.getResult = printResult;
+
+kush.getResult = printResult;
+ kush.marks.english = 70;
+
+console.log(yash.getResult());
+console.log(kush.getResult());
+
+    </script>
+</body>
+
+</html>

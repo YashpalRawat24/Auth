@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #todo-list, #removed-list, #new-list, #completed-list {
+            margin-bottom: 20px;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .todo-item button {
+            margin-left: 10px;
+        }
+
+        .removed-item {
+            text-decoration: line-through;
+        }
+
+        .statistics {
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            margin-bottom: 20px;
+        }
+
+        .stat-box div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To-Do List with Stats</h1>
+
+    <div>
+        <input type="text" id="task-input" placeholder="Enter a task">
+        <button id="add-task">Add Task</button>
+    </div>
+
+    <h2>Active Tasks</h2>
+    <div id="todo-list"></div>
+
+    <h2>Removed Tasks</h2>
+    <div id="removed-list"></div>
+
+    <div class="statistics">
+        <h3>Task Statistics</h3>
+
+        <div class="stat-box" id="all-box">
+            <h4>All Tasks</h4>
+            <div id="all-tasks"></div>
+        </div>
+
+        <div class="stat-box" id="new-box">
+            <h4>New Tasks</h4>
+            <div id="new-tasks"></div>
+        </div>
+
+        <div class="stat-box" id="completed-box">
+            <h4>Completed Tasks</h4>
+            <div id="completed-tasks"></div>
+        </div>
+
+        <div class="stat-box" id="removed-box">
+            <h4>Removed Tasks</h4>
+            <div id="removed-tasks"></div>
+        </div>
+    </div>
+
+    <script>
+        // Select elements
+        const taskInput = document.getElementById("task-input");
+        const addTaskButton = document.getElementById("add-task");
+        const todoList = document.getElementById("todo-list");
+        const removedList = document.getElementById("removed-list");
+        const allTasksBox = document.getElementById("all-tasks");
+        const newTasksBox = document.getElementById("new-tasks");
+        const completedTasksBox = document.getElementById("completed-tasks");
+        const removedTasksBox = document.getElementById("removed-tasks");
+
+        let tasks = [];
+
+        // Add task to the to-do list
+        addTaskButton.addEventListener("click", function() {
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const task = {
+                    text: taskText,
+                    completed: false,
+                    removed: false,
+                    element: null
+                };
+
+                // Create task item
+                const todoItem = document.createElement("div");
+                todoItem.classList.add("todo-item");
+
+                // Create checkbox
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+
+                // Create task text
+                const taskTextElement = document.createElement("span");
+                taskTextElement.textContent = taskText;
+
+                // Create cross button
+                const crossButton = document.createElement("button");
+                crossButton.textContent = "❌";
+
+                // Append elements to the todo item
+                todoItem.appendChild(checkbox);
+                todoItem.appendChild(taskTextElement);
+                todoItem.appendChild(crossButton);
+
+                // Save element for future use
+                task.element = todoItem;
+
+                // Add task to the tasks array
+                tasks.push(task);
+
+                // Add to the to-do list
+                todoList.appendChild(todoItem);
+
+                // Clear input
+                taskInput.value = "";
+
+                // Update Statistics
+                updateStatistics();
+
+                // Cross button click handler
+                crossButton.addEventListener("click", function() {
+                    task.removed = true;
+                    taskTextElement.classList.add("removed-item");
+                    checkbox.disabled = true; // Disable checkbox once removed
+                    todoList.removeChild(todoItem);
+                    removedList.appendChild(todoItem);
+                    updateStatistics();
+                });
+
+                // Checkbox click handler
+                checkbox.addEventListener("click", function() {
+                    task.completed = checkbox.checked;
+                    if (task.completed) {
+                        // Move item to completed list
+                        todoList.removeChild(todoItem);
+                        completedTasksBox.appendChild(todoItem);
+                    } else {
+                        // Move item back to the new list
+                        completedTasksBox.removeChild(todoItem);
+                        newTasksBox.appendChild(todoItem);
+                    }
+                    updateStatistics();
+                });
+            }
+        });
+
+        // Function to update the statistics
+        function updateStatistics() {
+            // Clear all stat boxes
+            allTasksBox.innerHTML = "";
+            newTasksBox.innerHTML = "";
+            completedTasksBox.innerHTML = "";
+            removedTasksBox.innerHTML = "";
+
+            // Populate the "All Tasks" box
+            tasks.forEach(task => {
+                const taskDiv = document.createElement("div");
+                taskDiv.textContent = task.text;
+                if (task.completed) {
+                    completedTasksBox.appendChild(taskDiv);
+                } else if (task.removed) {
+                    removedTasksBox.appendChild(taskDiv);
+                } else {
+                    newTasksBox.appendChild(taskDiv);
+                }
+                allTasksBox.appendChild(taskDiv);
+            });
+        }
+    </script>
+
+</body>
+</html>

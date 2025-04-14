@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      /* flex-wrap: wrap; */
+      font-size: 18px;
+      font-weight:bold;
+    }
+
+    .enrollment_input{
+         /* width: 300px; */
+        /* height: 100px; */
+        /* background-color: blue; */
+        /* padding:10px; */
+        /* display: flex;  */
+        /* justify-content: center; */
+        /* flex-direction: row; */
+    }
+
+    .enrollment_input input{
+        /* padding: 6px; */
+        /* border-radius: 10px; */
+    }
+
+    .p_rel{
+        /* background-color: aqua; */
+        /* display: flex; */
+        position: relative;
+        bottom: 19px;
+        left: 280px;
+
+        
+    }
+
+    .arrow_content{
+        height: 70px;
+        width: 130px;
+        border: 2px solid black;
+        /* background-color: blueviolet; */
+        position: absolute;
+        bottom: 56px;
+        left: -50px;
+     
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        display: none;
+     }
+     
+    .arrow_triangle{
+        border: 1px solid black;
+        width: 15px;
+        height: 19px;
+        /* background-color: rgb(211, 130, 23); */
+        position: absolute;
+        bottom: -22px;
+        left: 51px;
+        /* border-left: 8px;
+        border-right: 8px;
+        border-bottom: 8px; */
+        border: 2px solid black;
+        border-bottom-left-radius:45px ;
+        border-bottom-right-radius: 45px;
+    }
+
+     .p_rel:hover .arrow_content{
+        display: block;
+        cursor: pointer;
+    }
+</style>
+
+
+<body>
+
+    <div class="enrollment_input">
+<input type="text" name="legal_name" id="legal_name">
+
+<label for="legal_name">
+
+    "legal name"
+
+    <div class="p_rel d-inline-block">
+
+        <img src="information-line.png"/>
+        <div class="arrow_content arrow_contnent_bottom_left">
+
+            <span>Hi i'm tooltip text</span>
+            <span class="arrow_triangle arrow_triangle_bottom_left"></span>
+        </div>
+    </div>
+
+</label>
+
+    </div>
+
+
+    <!-- <div class="enrollment_input">
+        <input type="text" name="legal_name" id="legal_name">
+        
+        <label for="legal_name">
+        
+            "legal name"
+        
+            <div class="p_rel d-inline-block">
+        
+                <img src="information-line.png"/>
+                <div class="arrow_content arrow_contnent_bottom_left">
+        
+                    <span>Hi i'm tooltip text</span>
+                    <span class="arrow_triangle arrow_triangle_bottom_left"></span>
+                </div>
+            </div>
+        
+        </label>
+        
+            </div> -->
+</body>
+</html>

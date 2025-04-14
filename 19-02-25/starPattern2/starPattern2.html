@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="starPattern2.js"></script>
+</head>
+
+<style>
+    .container{
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 600px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+       flex-direction: column;
+    }
+    
+#hello{
+    margin-top: 90px;
+}
+
+    #result{
+        border: 2px solid black;
+        /* width: 400px;
+        height: 300px; */
+
+        margin-bottom: 10px;
+        padding: 50px;
+
+    }
+    </style>
+    <body>
+        <div class="container">
+    
+            <div id="hello">
+                <input type="number" id="rows" value="" placeholder="enter number of rows">
+            <button onclick="printStar()">Button</button>
+            <button onclick="clearIt()">Clear</button>
+        </div>
+            <div id="result"></div>
+        </div>
+</body>
+</html>

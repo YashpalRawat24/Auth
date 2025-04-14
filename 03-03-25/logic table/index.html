@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="home">
+   
+            <label for="name">Name:<input type="text" /></label><br>
+       
+
+        <div class="container">
+            <table>
+                <tr class="box">
+                    <td class="td">Physics: <input type="number" id="Physics" oninput="calculateTotal()" /></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Chemistery: <input type="number" id="Chemistery" oninput="calculateTotal()"/></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Math: <input type="number" id="math" oninput="calculateTotal()"/></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Biology: <input type="number" id="Biology" oninput="calculateTotal()"/></td>
+                </tr>
+                <tr class="box">
+                    <td class="td">Computer: <input type="number" id="computer" oninput="calculateTotal()"/></td>
+                </tr>
+            </table>
+        </div>
+        <h3>Total Marks: <span id="total"></span></h3><br>
+        <button onclick="calculateTotal()">Show Result</button>
+    </div>
+
+</body>
+</html>

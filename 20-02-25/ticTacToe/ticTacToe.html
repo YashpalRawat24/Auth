@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    /* *{
+        margin: 0px;
+        padding: 0px;
+    } */
+
+
+    body {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .container {
+        /* border: 2px solid black; */
+        width: 35vw;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        /* flex-direction: row; */
+
+    }
+
+    .boxes {
+        border: 2px solid black;
+        width: 10vw;
+        height: 10vh;
+    }
+
+    input {
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .button {
+        /* gap: 10px; */
+        /* background-color: aqua; */
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="boxes">0</div>
+        <div class="boxes">1</div>
+        <div class="boxes">2</div>
+        <div class="boxes">3</div>
+        <div class="boxes">4</div>
+        <div class="boxes">5</div>
+        <div class="boxes">6</div>
+        <div class="boxes">7</div>
+        <div class="boxes">8</div>
+    </div>
+    <input type="number" id="num" name="number" value=""><br><br>
+    <div id="but">
+        <button class="button" onclick="clickX()">X</button>
+        <button class="button" onclick="click0()">0</button>
+    </div>
+
+    <script>
+
+function clickX(){
+let number = document.getElementById("num").value;
+
+}
+
+function click0(){
+
+
+}
+
+
+
+
+
+
+
+        function clickX() {
+            let number = parseInt(document.getElementById("num").value);
+    
+    
+            let box = document.getElementsByClassName("boxes")[number];
+    
+            let value = box.innerText;
+            if (value === "X" || value === "O") {
+                return;
+            }
+    
+        
+    
+            if (box) {
+    
+                box.innerText = "X";
+                box.style.backgroundColor = "red";
+            }
+            else {
+                console.error("box is not found");
+            }
+        }
+    
+        function click0() {
+            let number = parseInt(document.getElementById("num").value);
+    
+    
+            let box = document.getElementsByClassName("boxes")[number];
+    
+            let value = box.innerText;
+            if (value === "X" || value === "O") {
+                return;
+            }
+    
+    
+            if (box) {
+    
+                box.innerText = "0";
+                box.style.backgroundColor = "#559cad";
+            }
+            else {
+                console.error("box is not found");
+            }
+        }
+    </script>
+</body>
+
+</html>

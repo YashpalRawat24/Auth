@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #inputBtn {
+        margin-top: 150px;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        border-radius: 7px;
+        border: 2px solid black;
+    }
+
+    #button {
+        margin: 20px;
+    }
+
+    .Btn {
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 15px;
+    }
+
+    .Btn:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <input type="text" placeholder="enter number" name="input" value="" id="inputBtn">
+    <div id="button">
+        <button id="createBtn" class="Btn" onclick="PrintMatrix()">create box</button>
+        <button id="matrixBtn" class="Btn">check matrix</button>
+    </div>
+    <div id="result">lorem24</div>
+
+
+
+
+
+    <script>
+
+const rows = document.getElementById("inputBtn").value;
+const createBtn = document.getElementById("createBtn");
+
+        function PrintMatrix() {
+           
+
+            let matrix = "";
+            for (i = 0; i < rows; i++) {
+
+          
+
+                for (j = 0; j < rows; j++) {
+
+
+                    matrix += " *";
+                }
+                matrix +=  "<br>";
+
+                document.getElementById("result").innerHTML = matrix;
+            }
+           
+        }
+        PrintMatrix();
+    </script>
+</body>
+
+</html>

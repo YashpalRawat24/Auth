@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star pattern</title>
+</head>
+
+<body>
+
+
+    <div id="result"></div>
+
+    <script>
+
+
+
+
+
+// star pattern in left hand triangle
+
+// let n = 5;
+    //    for(i=1;i<5;i++){
+    //     let row  = "";
+    //     for(j=1;j<5;j++){
+    //         row = row + " *";
+    //     }
+
+    //     console.log(row);
+    //    }
+
+
+
+
+
+    // star pattern in reverse left hand triangle
+
+    // let n = 5;
+//     for(i = 1; i<=n;i++){
+//     let row = "";
+//     for(j = i;j<=n ;j++){
+        
+//         row +=  " *";
+//     }
+    
+//     console.log(row);
+// }
+
+
+
+
+// let n = 6
+// for(i = 1; i<=n;i++){
+//     let row = "";
+//     for(j = 1;j<=(n-i) ;j++){
+        
+//         row +=  " *";
+//     }
+    
+//     console.log(row);
+// }
+
+
+
+
+//  star pattern in verticle pyramid
+
+
+
+// let n = 7;
+// let name = "y"
+
+// for(i = 1; i<=n;i++){
+//     let row = "";
+    
+//     for(j=1;j<=i;j++){
+//         row += ` ${name}`;
+//     }
+    
+//         console.log(row);
+// }
+    
+//     for(i = 1; i<=n;i++){
+//     let row = "";
+//     for(j = i;j<=n ;j++){
+        
+//         row +=  " *";
+//     }
+    
+//     console.log(row);
+// }
+
+
+
+// pyramid pattern
+
+
+// let n = 5;
+
+// for(i = 0; i < n; ++i){
+//     let rows = "";
+    
+//     for(j = 0; j < (n-i-1); ++j){
+//         rows += " ";
+//     }
+//     for(k = 0; k< (2*i+1); ++k){
+//         rows += "*";
+//     }
+//     for(l = 0; l < (n-i-1); ++l){
+//         rows += " ";
+//     }
+    
+//     console.log(rows);
+// }
+
+
+
+
+
+// reverse pyramid pattern
+
+
+// let n = 4;
+
+// for(i = 0; i <= n; ++i){
+//     let rows = "";
+    
+//     for(j = 0; j < (i+1-1); ++j){
+//         rows += " ";
+//     }
+//     for(k = 0; k< (2*n-2*i + 1); ++k){
+//         rows += "*";
+//     }
+//     for(l = 0; l < (i+1-1); ++l){
+//         rows += " ";
+//     }
+    
+//     console.log(rows);
+// }
+
+
+
+
+
+// ace pattern
+
+
+
+
+// let n = 5;
+
+// for(i = 0; i < n; ++i){
+//     let rows = "";
+    
+//     for(j = 0; j < (n-i-1); ++j){
+//         rows += " ";
+//     }
+//     for(k = 0; k< (2*i+1); ++k){
+//         rows += "*";
+//     }
+//     for(l = 0; l < (n-i-1); ++l){
+//         rows += " ";
+//     }
+    
+//     console.log(rows);
+// }
+
+
+
+
+// let N = 4;
+// for(i = 0; i <= N; ++i){
+//     let rows = "";
+    
+//     for(j = 0; j < (i); ++j){
+//         rows += " ";
+//     }
+//     for(k = 0; k< (2*N-2*i + 1); ++k){
+//         rows += "*";
+//     }
+//     for(l = 0; l < (i); ++l){
+//         rows += " ";
+//     }
+    
+//     console.log(rows);
+// }
+
+
+
+
+// const Result = document.getElementById("result");
+
+// let  n = 5;
+
+// for(i = 0;i<n;i++){
+//     let row = "";
+
+//     for(j = 0; j<=i;j++){
+//         row += " *" + "<br>"  ;
+//     }
+//     Result.innerHtml = row;
+   
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function User(data){
+
+const {age,name,...rest} = data;
+const [hobby1,hobby2,...h] = rest.hobbies;
+const isAdult = () => age >= 18;
+const hobbies = `${hobby1},${hobby2},etc`;
+
+return `${name} age is ${age} years and he can ${isAdult()? "":"not"} vote & like to ${hobbies}`;
+}
+
+// console.log( User{name:"Jayant",age:36,...rest});
+
+
+
+// console.log(User({name:"jayant",age:36}));
+
+
+userdata = {name:"jayant",age:36,hobbies:['a','b','c','d']};
+
+console.log(User(userdata));
+                           
+    </script>
+</body>
+
+</html>
